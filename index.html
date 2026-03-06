@@ -6,45 +6,128 @@
     <title>OpusData - Under Maintenance</title>
     <link rel="stylesheet" href="/style.css">
     <style>
-        /* Override for mobile */
+        /* Logo and header overrides */
+        #header { 
+            background: #fff; 
+            height: auto; 
+            border-bottom: 2px solid #be4a44; 
+            padding: 20px 0; 
+            text-align: center;
+        }
+        #logo { 
+            width: 100%; 
+            height: auto; 
+            float: none; 
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        #logo img { 
+            max-width: 400px; 
+            width: 80%; 
+            height: auto;
+        }
+        .opusdata-title { 
+            font-size: 3.5em; 
+            font-weight: bold; 
+            color: #be4a44; 
+            margin: 0; 
+            text-align: center;
+            letter-spacing: 2px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        /* Clean maintenance content */
+        #content-left { 
+            width: 100%; 
+            float: none; 
+            padding: 40px 10px;
+            text-align: center;
+        }
+        .maintenance-box { 
+            background: #fff; 
+            border: 2px solid #be4a44; 
+            border-radius: 8px; 
+            padding: 40px; 
+            margin: 30px auto; 
+            max-width: 700px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .maintenance-title { 
+            font-size: 2.5em; 
+            color: #be4a44; 
+            margin-bottom: 20px;
+        }
+        .maintenance-text { 
+            font-size: 1.3em; 
+            color: #333; 
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .slogan { 
+            font-size: 1.8em; 
+            color: #993333; 
+            text-align: center; 
+            margin: 40px 0;
+        }
+        
+        /* Social */
+        .social-links { 
+            margin: 30px 0; 
+            text-align: center;
+        }
+        .social-links a { 
+            color: #be4a44; 
+            margin: 0 20px; 
+            font-size: 2em; 
+            text-decoration: none;
+        }
+        
+        /* Mobile */
         @media (max-width: 768px) {
-            .container-width { width: 100%; padding: 0 20px; }
-            #content-left { width: 100%; float: none; }
-            #content-right { width: 100%; float: none; margin-top: 20px; }
+            .container-width { width: 100%; padding: 0 15px; }
+            .opusdata-title { font-size: 2.5em; }
+            .maintenance-title { font-size: 2em; }
+            .maintenance-text { font-size: 1.1em; }
+            #logo img { width: 90%; }
         }
     </style>
 </head>
 <body>
     <div id="wrapper">
+        <!-- Header with BIG OpusData logo -->
+        <div id="header">
+            <div class="container-width">
+                <div id="logo">
+                    <img src="/logo.jpg" alt="OpusData" onerror="this.src='/logo.jpg'">
+                </div>
+                <h1 class="opusdata-title">OPUSDATA</h1>
+            </div>
+        </div>
+        
         <div id="center">
             <div class="container-width">
                 <div id="content">
                     <div id="content-left">
-                        <p class="slogan">OpusData</p>
-                        
-                        <div style="background: #2e2e2e; color: #e5e5e5; padding: 30px; border-radius: 8px; text-align: center; margin: 20px 0;">
-                            <h1 style="color: #be4a44; font-size: 2em; margin-bottom: 20px;">🚧 Under Maintenance</h1>
-                            <p style="font-size: 1.2em; margin-bottom: 30px;">
-                                We're updating our movie data API systems. 
-                                <br>We'll be back online shortly!
+                        <div class="maintenance-box">
+                            <h2 class="maintenance-title">🚧 Under Maintenance</h2>
+                            <p class="maintenance-text">
+                                We're updating our movie data API systems to bring you even better service.
                             </p>
-                            <p>Filmmakers, Financial Analysts, Independent Developers and Production Companies alike trust OpusData.</p>
+                            <p class="maintenance-text">
+                                Filmmakers, Financial Analysts, Independent Developers and Production Companies 
+                                alike trust OpusData for the data they need to drive their businesses.
+                            </p>
                         </div>
                         
-                        <div id="promote_options" style="text-align: center;">
-                            <p style="color: #993333; font-size: 1.1em;">The fastest, easiest, most reliable way to add movie data to your business</p>
-                        </div>
-                    </div>
-                    
-                    <div id="content-right">
-                        <div style="background: #2e2e2e; color: #e8e8e8; padding: 25px; border-radius: 8px; text-align: center;">
-                            <h4 style="color: #be4a44;">Follow Us</h4>
-                            <div style="margin: 20px 0;">
-                                <a href="https://www.facebook.com/TheNumbers" style="color: #be4a44; margin: 0 15px; font-size: 1.5em;" target="_blank">Facebook</a>
-                                <a href="https://twitter.com/MovieNumbers" style="color: #be4a44; margin: 0 15px; font-size: 1.5em;" target="_blank">Twitter</a>
-                                <a href="https://www.instagram.com/thenumbersmoviedata/" style="color: #be4a44; margin: 0 15px; font-size: 1.5em;" target="_blank">Instagram</a>
-                            </div>
-                            <p style="font-size: 0.9em; color: #999;">© OpusData - Movie Data API</p>
+                        <p class="slogan">
+                            The fastest, easiest, most reliable way to add movie data to your business
+                        </p>
+                        
+                        <!-- Social links -->
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/TheNumbers" target="_blank" title="Facebook">Facebook</a>
+                            <a href="https://twitter.com/MovieNumbers" target="_blank" title="Twitter">Twitter</a>
+                            <a href="https://www.instagram.com/thenumbersmoviedata/" target="_blank" title="Instagram">Instagram</a>
                         </div>
                     </div>
                 </div>
